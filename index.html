@@ -1,36 +1,125 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Kartik's Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Neon Website</title>
+
     <style>
-    body {
-        background-color: lightblue;
-        font-family: Arial;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    h1 {
-        color: darkblue;
-    }
+        body {
+            min-height: 100vh;
+            background: #080812;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px 15px;
+            overflow-x: hidden;
+        }
 
-    p {
-        color: black;
-        font-size: 18px;
-    }
-</style>
-    
+        .circle {
+            position: fixed;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: #00eaff;
+            filter: blur(100px);
+            opacity: 0.35;
+            top: 20px;
+            left: -50px;
+            animation: float 5s infinite alternate;
+            z-index: -1;
+        }
+
+        h1 {
+            color: #00eaff;
+            font-size: 38px;
+            margin-top: 65px;
+            text-shadow: 0 0 20px #00eaff;
+            animation: appear 1.5s ease;
+        }
+
+        h2 {
+            color: orange;
+            margin: 35px 0 15px;
+        }
+
+        p {
+            color: #ccccdd;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+
+        .card {
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 25px;
+            background: #151526;
+            border: 1px solid #00eaff;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #00eaff22;
+            animation: appear 2s ease;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 30px;
+            background: #00eaff;
+            color: #080812;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px #00eaff;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0); }
+            to { transform: translateY(100px); }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello Kartik!</h1>
-    <h2>About Me</h2>
-    <p>I am a student.</p>
-    <p>I am learning web development.</p>
-    <h2>My Goal</h2>
-    <p>I want to become a software developer.</p>
-    <button onclick="alert('Welcome Kartik!')">
-    Click Me
-</button>
-    
+    <div class="circle"></div>
+
+    <h1>WELCOME!</h1>
+    <p>My First Animated Website</p>
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>I am a student.</p>
+        <p>I am learning HTML and CSS.</p>
+
+        <h2>My Dream</h2>
+        <p>I want to become a Software Developer.</p>
+
+        <button onclick="alert('Keep Learning! You Can Do It!')">
+            Let's Go 🚀
+        </button>
+    </div>
 </body>
 </html>
-
