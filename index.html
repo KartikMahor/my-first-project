@@ -7,6 +7,31 @@
     <title>My Neon Website</title>
 
     <style>
+        /* Animated gradient background */
+body {
+    background: linear-gradient(
+        135deg,
+        #080812,
+        #101044,
+        #230b35,
+        #080812
+    );
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+        
         * {
             margin: 0;
             padding: 0;
